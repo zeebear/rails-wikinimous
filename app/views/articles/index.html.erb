@@ -1,0 +1,13 @@
+<!-- <header>
+  <div class="home"><%= link_to "Wikinimous", articles_path %></div>
+  <div class="create"><%= link_to "New Article", new_article_path %></div>
+</header> -->
+
+<div class="container">
+  <% @articles.each do |article| %>
+    <h2 class="articleTitle"><%= link_to article.title, article_path(article) %></h2>
+    <div class="articleContent"><%= article.content %></div>
+  <% end %>
+</div>
+
+<%  %>
